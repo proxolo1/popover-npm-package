@@ -1,27 +1,68 @@
-# PopOver
+# Popover 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Install proxolo-popover with npm
 
-## Build
+```bash
+  npm i proxolo-popover
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+### app.module.ts
+```
+import { PopoverModule } from 'proxolo-popover';
 
-## Running unit tests
+ imports: [
+    PopoverModule
+  ]
+```
+### app.component.html
+```
+<popover
+[buttonStyle]="'icon'"
+[title]="'Title'"
+[type]="'text'"
+[body]="'Body'"
+></popover>
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## angular.json
 
-## Running end-to-end tests
+```
+styles :
+"node_modules/primeng/resources/themes/saga-blue/theme.css",
+"node_modules/bootstrap/dist/css/bootstrap.css"
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+## API Reference
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### button style
+
+```
+  icon,label
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `icon` | `string` |       font awesome icon |
+| `label` | `string` |       text |
+
+#### type
+
+```http
+  text, html
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `text`      | `string` | text for the popover |
+| `html`      | `html` | html format |
+
+
+## screenshot
+![Screenshot (11)](https://user-images.githubusercontent.com/73517233/224474856-60407fc3-1662-4abd-b5da-50dd507c12cf.png)
